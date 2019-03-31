@@ -149,8 +149,8 @@ footer, nav, li {
 	z-index: 1;
 }
 .phone {
-	padding-left: 8px;
-	padding-right: 8px;
+	padding-left: 6px;
+	padding-right: 6px;
 	text-align: center;
 	color: grey;
 	transition: background-color 1s ease;
