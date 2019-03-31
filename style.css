@@ -133,13 +133,13 @@ a:hover {
 	border-bottom: 5px solid red;
 }
 @media screen and (max-width: 600px) {
-* {   
+* { 
+	text-align: left;
     padding: 0;
   }
 }
 @media screen and (max-width: 600px) {
-footer {   
-	position: static;
-	width: 10%;
+footer, nav {   
+	visibility: hidden;
   }
 }
