@@ -169,6 +169,6 @@ footer, nav, li {
 }
 @media screen and (max-width: 991px) {
 .logo {   
-	visibility: hidden;
+	padding-top: 30px;
   }
 }
