@@ -5,8 +5,8 @@ body {
 	height: 100%; 
 	background-position: center;
 	background-size: cover;
-	color: white;
 	background-attachment: fixed;
+	color: white;
 	max-width: 100%;
 }
 * {
@@ -32,12 +32,15 @@ li a {
 	text-decoration: none;
 	color: red;
 	transition: background-color 1.5s ease;
+	border-radius: 30px;
 }
 li a:link {
 	text-decoration: none;
 }
 li a:hover {
 	color: rgb(150,0,0);
+	background-color: rgb(66, 9, 7, 0.6);
+	border-radius: 30px;
 }
 .resume {
 	float: left;
@@ -132,14 +135,34 @@ a:hover {
 .fourth {
 	border-bottom: 5px solid red;
 }
-@media screen and (max-width: 600px) {
-* { 
-	text-align: left;
-    padding: 0;
+@media screen and (max-width: 991px) {
+footer, nav, li {   
+	visibility: hidden;
   }
 }
-@media screen and (max-width: 600px) {
-footer, nav {   
+
+.test {
+	background-color: rgb(183, 60, 33, 0.5);
+	padding: 3px;
+	position: fixed;
+	width: 100%;
+}
+.phone {
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+	color: rgb(150,0,0);
+	transition: background-color 1s ease;
+	border-radius: 30px;
+}
+.phone:hover {
+	color: rgb(150,0,0);
+	background-color: rgb(66, 9, 7, 0.6);
+	border-radius: 30px;
+}
+
+@media screen and (min-width: 991px) {
+.test {   
 	visibility: hidden;
   }
 }
