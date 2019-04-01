@@ -48,6 +48,15 @@ li a:hover {
 	margin-left: 30%;
 	margin-top: 5%;
 }
+.resumeitem {
+	margin-bottom: 50px;
+}
+.early {
+	margin-bottom: 50px;
+}
+.about{
+	margin-bottom: 50px;
+}
 .logo2 {
 	border: solid;
 	padding: 25px;
@@ -135,7 +144,7 @@ a:hover {
 .fourth {
 	border-bottom: 5px solid red;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 780px) {
 footer, nav, .navigation {   
 	visibility: hidden;
   }
@@ -162,34 +171,40 @@ footer, nav, .navigation {
 	border-radius: 30px;
 }
 
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 780px) {
 .test{   
 	visibility: hidden;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 780px) {
 .logo {   
 	padding-top: 30px;
   }
 }
-@media screen and (min-width: 991px) {
+@media screen and (min-width: 780px) {
 .footerphone, .navsomee, .somee {   
 	visibility: hidden;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 780px) {
 .footerphone, .navsomee {   
 	position: fixed;
 	bottom: 0;
 	background-color: rgb(158, 22, 20);
 	width: 100%;
-	max-height: 36px;
+	max-height: 45px;
 	color: grey;
+	padding: 5px;
   }
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 780px) {
 .navsomee {   
 	margin-left: 43%;
 	opacity: 0.8;
+  }
+}
+@media screen and (max-width: 780px) {
+body {   
+	background-image: url("bgphone.jpg");
   }
 }
