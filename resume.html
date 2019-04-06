@@ -11,8 +11,15 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="animate.css">
 	<style>
+@media only screen and (min-width: 780px) {
 body {
-	background-image: url("brg.jpg");
+	background-image: url("images/brg.jpg");
+	}
+}
+@media only screen and (max-width: 780px) {
+body {
+	background-image: url("images/bgphonee.jpg");
+	}
 }
 div#load_screen{
 	background: #000;
@@ -35,18 +42,35 @@ div#load_screen > div#loading{
 window.addEventListener("load", function(){
 	var load_screen = document.getElementById("load_screen");
 	document.body.removeChild(load_screen);
+	
+	var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
 });
 </script>
-	<link rel="shortcut icon" type="image/x-icon" href="mylogo.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="logos/mylogo.ico" />
 </head>
   <body>
   <div id="load_screen"><div id="loading">Loading Portfolio<div class="lds-dual-ring"></div></div></div>
 	<header>
 		<div class="logo">
-			<img src="mylogo.png" alt="Logo" title="10 out of 10 logo" style="width:82px; height:82px;">
+			<img src="logos/mylogo.png" alt="Logo" title="10 out of 10 logo" style="width:82px; height:82px;">
 		</div>
-		<h1 class="resume animated fadeInUp">Portfolio</h1>
+		<div class="test" id="navbar">
+			<a class="phone" href="index.html">Home</a>
+			<a class="second phone" href="resume.html">Portfolio</a>
+			<a class="phone" href="personality.html">About</a>
+			<a class="phone" href="history.html">His story</a>
+		</div>
 	</header>
+	<h1 class="resume animated fadeInUp">Portfolio</h1>
 	<main>
 		<div class="container">
 			<div class="row">
@@ -79,7 +103,7 @@ window.addEventListener("load", function(){
 						<li>Olari upper secondary school</li>
 						<li>Certified in first aid</li>
 						<li>Hygiene passport</li>
-						<li>Language skills include rudiments in french, swedish and spoken japanese</li>
+						<li>Language skills include rudiments in french and swedish</li>
 					</ul>
 				</div>
 					<div class="col-sm-5">
@@ -94,16 +118,26 @@ window.addEventListener("load", function(){
 			</div>
 		</div>	
 	</main>
-    <footer class="footerresume">
+	    <footer class="footerresume">
+		<div class="footerr">
+			<p>Portfolio Jaakko R</p>
+		</div>
+		</footer>
+		<nav class="navsome">
+			<a class="some" href="https://www.facebook.com" target="_blank"><img src="logos/facebooklogo.png" style="width:42px; height:42px;" alt="Facebook" ></a>
+			<a class="some" href="https://www.instagram.com" target="_blank"><img src="logos/iglogo.png" style="width:42px; height:42px;" alt="Instagram"></a>
+			<a class="some" href="mailto:yllappahoc-5573@yopmail.com"><img src="logos/emaillogo.png" style="width:42px; height:42px;" alt="Email"></a>
+		</nav>
+    <div class="footerphone">
 		<div class="footer">
 			<p>Portfolio Jaakko R</p>
 		</div>
-	</footer>
-		<nav class="navsome">
-			<a class="some" href="https://www.facebook.com" target="_blank"><img src="facebooklogo.png" style="width:42px; height:42px;" alt="Facebook" ></a>
-			<a class="some" href="https://www.instagram.com" target="_blank"><img src="iglogo.png" style="width:42px; height:42px;" alt="Instagram"></a>
-			<a class="some" href="mailto:yllappahoc-5573@yopmail.com"><img src="emaillogo.png" style="width:42px; height:42px;" alt="Email"></a>
-		</nav>
+		</div>
+		<div class="navsomee">
+			<a class="somee" href="https://www.facebook.com" target="_blank"><img src="logos/facebooklogo.png" style="width:42px; height:42px;" alt="Facebook" ></a>
+			<a class="somee" href="https://www.instagram.com" target="_blank"><img src="logos/iglogo.png" style="width:42px; height:42px;" alt="Instagram"></a>
+			<a class="somee" href="mailto:yllappahoc-5573@yopmail.com"><img src="logos/emaillogo.png" style="width:42px; height:42px;" alt="Email"></a>
+		</div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
