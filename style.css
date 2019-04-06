@@ -215,6 +215,9 @@ footer, nav, .navigation {
 	opacity: 0.9;
   }
 }
+.later {
+	padding-bottom: 10%;
+}
 button {
 	position: absolute;
 	margin-top: 5%;
@@ -250,12 +253,6 @@ button:hover {
 	margin-top: -29%;
 	box-shadow: 7px 7px 4px grey;
 }
-@media screen and (max-width: 780px) {
-#myDIV, video, button {   
-	visibility: hidden;
-  }
-}
-
 *,
 *::before,
 *::after { 
