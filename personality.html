@@ -11,8 +11,15 @@
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="animate.css">
 		<style>
+@media only screen and (min-width: 780px) {
 body {
-	background-image: url("brg.jpg");
+	background-image: url("images/brg.jpg");
+	}
+}
+@media only screen and (max-width: 780px) {
+body {
+	background-image: url("images/bgphonee.jpg");
+	}
 }
 div#load_screen{
 	background: #000;
@@ -36,18 +43,93 @@ window.addEventListener("load", function(){
 	var load_screen = document.getElementById("load_screen");
 	document.body.removeChild(load_screen);
 });
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+function myFunction() {
+  var x = document.getElementById("myDIVV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+function myFunction() {
+
+            var btn = document.getElementById("myButton");
+            //to make it fancier
+            if (btn.value == "Click To Close") {
+                btn.value = "Click To Open";
+                btn.innerHTML = "Click To Open";
+            }
+            else {
+                btn.value = "Click To Close";
+                btn.innerHTML = "Click To Close";
+            }
+            //this is what you're looking for
+            var x = document.getElementById("myDIVV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
+var i = 0; 			// Start Point
+var images = [];	// Images Array
+var time = 4000;	// Time Between Switch
+	 
+// Image List
+images[0] = "img1.jpg";
+images[1] = "img2.jpg";
+images[2] = "img3.jpg";
+images[3] = "img4.jpg";
+images[4] = "img5.jpg";
+images[5] = "img6.jpg";
+
+// Change Image
+function changeImg(){
+	document.slide.src = images[i];
+
+	// Check If Index Is Under Max
+	if(i < images.length - 1){
+	  // Add 1 to Index
+	  i++; 
+	} else { 
+		// Reset Back To O
+		i = 0;
+	}
+
+	// Run function every x seconds
+	setTimeout("changeImg()", time);
+}
+
+// Run function when page loads
+window.onload=changeImg;
+
 </script>
-	<link rel="shortcut icon" type="image/x-icon" href="mylogo.ico" />
+	<link rel="shortcut icon" type="image/x-icon" href="logos/mylogo.ico" />
 </head>
   <body>
     <div id="load_screen"><div id="loading">Loading Portfolio<div class="lds-dual-ring"></div></div></div>
 	<header>
 		<div class="logo">
-			<img src="mylogo.png" alt="Logo" title="10 out of 10 logo" style="width:82px; height:82px;">
+			<img src="logos/mylogo.png" alt="Logo" title="10 out of 10 logo" style="width:82px; height:82px;">
 		</div>
 		
 		
-		<div class="test">
+		<div class="test" id="navbar">
 			<a class="phone" href="index.html">Home</a>
 			<a class="phone" href="resume.html">Portfolio</a>
 			<a class="third phone" href="personality.html">About</a>
@@ -65,6 +147,7 @@ window.addEventListener("load", function(){
 						<li><a href="resume.html">Portfolio</a></li>
 						<li><a class="third" href="personality.html">About</a></li>
 						<li><a href="history.html">His story</a></li>
+						<button class="animated fadeInUp" onclick="myFunction()" id="myButton" value="Click To Open Instructions">Gallery</button>
 					</ul>
 				</div>
 				<div class="col-sm-9 animated fadeInUp">
@@ -73,7 +156,7 @@ window.addEventListener("load", function(){
 					Last time I was late going somewhere or with a schoolwork was probably during elementary 
 					school (so long ago don’t even remember what). My personality also consists of wanting to learn new things with an open mind and being unbiased. 
 					As for social skills I’m friendly and an excellent listener, but a stereotypical finnish person when it comes to opening my mouth. 
-					And the more unflattering things include sometimes taking the easy way out, not saying what should be said and all round social aptitude which sometimes
+					And the more unflattering things include sometimes taking the easy way out, not saying what should be said and all-round lone wolf demeanour which sometimes
 					comes off as cold.</p>
 					</div>
 			</div>
@@ -85,14 +168,32 @@ window.addEventListener("load", function(){
 				<div class="col-sm-9">
 					<h3>What I want to improve</h3>
 					<ul class="resumeitem">
-						<li>Communicational skills</li>
+						<li>Not try to do everything myself</li>
 						<li>Teamwork skills</li>
 						<li>More realistic risk analysis (a falling meteor isn’t something that I need to account for)</li>
 						<li>Courage to go forth</li>
 					</ul>
 				</div>
 			</div>
-		</div>	
+		</div>
+		
+		
+		<div class="card animated fadeIn" style="display:none" id="myDIVV" name="slide">
+			<div class="card_part card_part-one">
+			</div>
+			<div class="card_part card_part-two">
+			</div>
+			<div class="card_part card_part-three">
+			</div>
+			<div class="card_part card_part-four">
+			</div>
+			<div class="card_part card_part-five">
+			</div>
+			<div class="card_part card_part-six">
+			</div>
+		</div>		
+
+
 	</main>
 	    <footer class="footerresume">
 		<div class="footerr">
@@ -100,22 +201,21 @@ window.addEventListener("load", function(){
 		</div>
 		</footer>
 		<nav class="navsome">
-			<a class="some" href="https://www.facebook.com" target="_blank"><img src="facebooklogo.png" style="width:42px; height:42px;" alt="Facebook" ></a>
-			<a class="some" href="https://www.instagram.com" target="_blank"><img src="iglogo.png" style="width:42px; height:42px;" alt="Instagram"></a>
-			<a class="some" href="mailto:yllappahoc-5573@yopmail.com"><img src="emaillogo.png" style="width:42px; height:42px;" alt="Email"></a>
+			<a class="some" href="https://www.facebook.com" target="_blank"><img src="logos/facebooklogo.png" style="width:42px; height:42px;" alt="Facebook" ></a>
+			<a class="some" href="https://www.instagram.com" target="_blank"><img src="logos/iglogo.png" style="width:42px; height:42px;" alt="Instagram"></a>
+			<a class="some" href="mailto:yllappahoc-5573@yopmail.com"><img src="logos/emaillogo.png" style="width:42px; height:42px;" alt="Email"></a>
 		</nav>
-		
     <div class="footerphone">
 		<div class="footer">
 			<p>Portfolio Jaakko R</p>
 		</div>
 		</div>
 		<div class="navsomee">
-			<a class="somee" href="https://www.facebook.com" target="_blank"><img src="facebooklogo.png" style="width:42px; height:42px;" alt="Facebook" ></a>
-			<a class="somee" href="https://www.instagram.com" target="_blank"><img src="iglogo.png" style="width:42px; height:42px;" alt="Instagram"></a>
-			<a class="somee" href="mailto:yllappahoc-5573@yopmail.com"><img src="emaillogo.png" style="width:42px; height:42px;" alt="Email"></a>
-		</div>
-	
+			<a class="somee" href="https://www.facebook.com" target="_blank"><img src="logos/facebooklogo.png" style="width:42px; height:42px;" alt="Facebook" ></a>
+			<a class="somee" href="https://www.instagram.com" target="_blank"><img src="logos/iglogo.png" style="width:42px; height:42px;" alt="Instagram"></a>
+			<a class="somee" href="mailto:yllappahoc-5573@yopmail.com"><img src="logos/emaillogo.png" style="width:42px; height:42px;" alt="Email"></a>
+		</div>	
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
