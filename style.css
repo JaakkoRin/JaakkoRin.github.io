@@ -47,6 +47,11 @@ body {
 .hiddentxt:hover {
 	color: black;
 }
+@media screen and (max-width: 780px) {
+.txthid {   
+	visibility: hidden;
+  }
+}
 
 main {
 	clear: both;
@@ -81,7 +86,7 @@ li a:hover {
 	margin-top: 5%;
 }
 .resumeitem {
-	margin-bottom: 50px;
+	margin-bottom: 130px;
 }
 .early {
 	margin-bottom: 50px;
@@ -213,7 +218,11 @@ footer, nav, .navigation {
 	border-radius: 30px;
 }
 
-
+@media screen and (min-width: 780px) {
+.test{   
+	visibility: hidden;
+  }
+}
 @media screen and (max-width: 780px) {
 .logo {   
 	padding-top: 30px;
@@ -336,4 +345,11 @@ background-size: contain;
   25% { transform: translateX( 0 ); }
   28% { transform: translateX( -1300px ); }
   100% { transform: translateX( -1300px ); }
+}
+
+
+@media screen and (min-width: 780px) {
+.mgallery {   
+	visibility: hidden;
+  }
 }
