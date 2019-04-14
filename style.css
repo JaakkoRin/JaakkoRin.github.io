@@ -47,12 +47,6 @@ body {
 .hiddentxt:hover {
 	color: black;
 }
-@media screen and (max-width: 780px) {
-.txthid {   
-	visibility: hidden;
-  }
-}
-
 main {
 	clear: both;
 }
@@ -244,14 +238,30 @@ footer, nav, .navigation {
 	padding: 5px;
   }
 }
+
 @media screen and (max-width: 780px) {
 .navsomee {   
 	margin-left: 43%;
 	opacity: 0.9;
   }
 }
+@media screen and (max-width: 780px) {
+#myDIVV, .card, .card_part{  
+	margin-top: 50%;
+	width: 95%;
+	max-width: 400px;
+	z-index: -5;
+  }
+}
+@media screen and (max-width: 780px) {
+#myDIV{  
+	margin-bottom: 20%;
+	height: 50%;
+	width: 50%;
+  }
+}
 .later {
-	padding-bottom: 10%;
+	margin-bottom: 180px;
 }
 button {
 	position: absolute;
@@ -285,7 +295,7 @@ button:hover {
 	position: absolute;
 	margin-left: 30%;
 	display: none;
-	margin-top: -38%;
+	margin-top: -35%;
 	box-shadow: 7px 7px 4px grey;
 }
 *,
@@ -346,8 +356,6 @@ background-size: contain;
   28% { transform: translateX( -1300px ); }
   100% { transform: translateX( -1300px ); }
 }
-
-
 @media screen and (min-width: 780px) {
 .mgallery {   
 	visibility: hidden;
