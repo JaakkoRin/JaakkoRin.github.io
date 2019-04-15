@@ -74,8 +74,27 @@ function myFunction() {
             } else {
                 x.style.display = "none";
             }
-        }
+        }	
+function myFunctionm() {
 
+            var btn = document.getElementById("myButtonm");
+            //to make it fancier
+            if (btn.value == "Click To Close") {
+                btn.value = "Click To Open";
+                btn.innerHTML = "Click To Open";
+            }
+            else {
+                btn.value = "Click To Close";
+                btn.innerHTML = "Click To Close";
+            }
+            //this is what you're looking for
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
 	</script>
 	<link rel="shortcut icon" type="image/x-icon" href="mylogo.ico" />
 </head>
@@ -118,7 +137,7 @@ function myFunction() {
 					At this point point I picked up skiing to replace my other sports. After graduating I spent two years searching my road during which I tried many different paths. 
 					In the winter 2018 I decided to apply to Laurea university of applied sciences, line being Bachelor of Science in Information Technology. 
 					A few weeks later I received information that I’ve been accepted. Currently I am studying there, happy with my choice.
-					<br><button class="mgallery animated fadeInUp" onclick="myFunction()" id="myButton" value="Click To Open Instructions">Click for gymnastics</button></p>
+					<br><button class="mgallery animated fadeInUp" onclick="myFunctionm()" id="myButtonm" value="Click To Open Instructions">Click for gymnastics</button></p>
 				</div>
 			</div>
 		</div>
