@@ -24,15 +24,34 @@ body {
 	font-style: italic;
 	text-shadow: 2px 2px black;
 }
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+.dropdown-content {
+	display: none;
+	position: absolute;
+	z-index: 1;
+}
+.dropdown-content a {
+	color: black;
+	padding: 2px 2px;
+	text-decoration: none;
+	display: block;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
+}
 .hiddentxt{
 	color: grey;
-	
 }
 .hiddenimg {
 	visibility: hidden;
 	opacity: 0;
 	transition: visibility 0s, opacity 0.5s linear;
 	display: none;
+	bottom: -220px;
+	left: -25%;
 }
 .hiddentxt:hover ~ .hiddenimg {
 	visibility: visible;
@@ -125,20 +144,20 @@ a:hover {
 	opacity: 1;
 }
 .lds-dual-ring {
-  display: inline-block;
-  width: 64px;
-  height: 64px;
+	display: inline-block;
+	width: 64px;
+	height: 64px;
 }
 .lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 46px;
-  height: 46px;
-  margin: 1px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  border-color: #fff transparent #fff transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
+	content: " ";
+	display: block;
+	width: 46px;
+	height: 46px;
+	margin: 1px;
+	border-radius: 50%;
+	border: 5px solid #fff;
+	border-color: #fff transparent #fff transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
   0% {
@@ -149,20 +168,20 @@ a:hover {
   }
 }
 .lds-dual-ring {
-  display: inline-block;
-  width: 64px;
-  height: 64px;
+	display: inline-block;
+	width: 64px;
+	height: 64px;
 }
 .lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 46px;
-  height: 46px;
-  margin: 1px;
-  border-radius: 50%;
-  border: 5px solid #fff;
-  border-color: #fff transparent #fff transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
+	content: " ";
+	display: block;
+	width: 46px;
+	height: 46px;
+	margin: 1px;
+	border-radius: 50%;
+	border: 5px solid #fff;
+	border-color: #fff transparent #fff transparent;
+	animation: lds-dual-ring 1.2s linear infinite;
 }
 @keyframes lds-dual-ring {
   0% {
@@ -199,8 +218,8 @@ footer, nav, .navigation {
 	transition: top 0.5s;
 }
 .phone {
-	padding-left: 6px;
-	padding-right: 6px;
+	padding-left: 1px;
+	padding-right: 1px;
 	text-align: center;
 	color: grey;
 	transition: background-color 1s ease;
@@ -251,13 +270,21 @@ footer, nav, .navigation {
 	width: 95%;
 	max-width: 400px;
 	z-index: -5;
+	background-repeat:no-repeat;
+	left: -27%;
   }
 }
 @media screen and (max-width: 780px) {
 #myDIV{  
 	margin-bottom: 20%;
-	height: 50%;
-	width: 50%;
+	height: 110%;
+	width: 95%;
+	left: -33%;
+  }
+}
+@media screen and (max-width: 780px) {
+h1 {  
+	left: -20%;
   }
 }
 .later {
@@ -301,60 +328,60 @@ button:hover {
 *,
 *::before,
 *::after { 
-box-sizing: border-box;
-background-size: contain;
+	box-sizing: border-box;
+	background-size: contain;
 }
 .card {
-  position: relative;
-  width: 800px;
-  height: 600px;
-  overflow: hidden;
-  border-radius: 5px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-  background-color: rgba(140, 22, 115, 0.0);
+	position: relative;
+	width: 800px;
+	height: 600px;
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+	background-color: rgba(140, 22, 115, 0.0);
 }
 
 .card_part {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 7;
-  width: 800px;
-  height: 600px;
-   transform: translateX( 1300px );
-  background-image: url(img6.jpg );
-  animation: opaqTransition 24s cubic-bezier(0.8, 0.8, 0.8, 0.8) infinite;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	width: 800px;
+	height: 600px;
+	transform: translateX( 1300px );
+	background-image: url(img6.jpg );
+	animation: opaqTransition 24s cubic-bezier(0.8, 0.8, 0.8, 0.8) infinite;
 }
 .card_part.card_part-two {
-  z-index: 6;
-  background-image: url(img2.jpg);
-  animation-delay: 4s;
+	z-index: 6;
+	background-image: url(img2.jpg);
+	animation-delay: 4s;
 }
 .card_part.card_part-three {
-  z-index: 5;
-  background-image: url(img3.jpg);
-  animation-delay: 8s;
+	z-index: 5;
+	background-image: url(img3.jpg);
+	animation-delay: 8s;
 }
 .card_part.card_part-four {
-  z-index: 4;
-  background-image: url(img4.jpg);
-  animation-delay: 12s;
+	z-index: 4;
+	background-image: url(img4.jpg);
+	animation-delay: 12s;
 }
 .card_part.card_part-five {
-  z-index: 3;
-  background-image: url(img5.jpg);
-  animation-delay: 16s;
+	z-index: 3;
+	background-image: url(img5.jpg);
+	animation-delay: 16s;
 }
 .card_part.card_part-six {
-  z-index: 2;
-  background-image: url(img1.jpg);
-  animation-delay: 20s;
+	z-index: 2;
+	background-image: url(img1.jpg);
+	animation-delay: 20s;
 }
 @keyframes opaqTransition {
-  3% { transform: translateX( 0 ); }
-  25% { transform: translateX( 0 ); }
-  28% { transform: translateX( -1300px ); }
-  100% { transform: translateX( -1300px ); }
+	3% { transform: translateX( 0 ); }
+	25% { transform: translateX( 0 ); }
+	28% { transform: translateX( -1300px ); }
+	100% { transform: translateX( -1300px ); }
 }
 @media screen and (min-width: 780px) {
 .mgallery {   
