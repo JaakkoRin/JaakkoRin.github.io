@@ -84,28 +84,7 @@ function myFunction() {
                 x.style.display = "none";
             }
         }
-function myFunctionm() {
 
-            var btn = document.getElementById("myButtonm");
-            //to make it fancier
-            if (btn.value == "Click To Close") {
-                btn.value = "Click To Open";
-                btn.innerHTML = "Click To Open";
-            }
-            else {
-                btn.value = "Click To Close";
-                btn.innerHTML = "Click To Close";
-            }
-            //this is what you're looking for
-            var x = document.getElementById("myDIV");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-		
-		
 var i = 0; 			// Start Point
 var images = [];	// Images Array
 var time = 4000;	// Time Between Switch
@@ -176,7 +155,7 @@ window.onload=changeImg;
 						<li><a href="resume.html">Portfolio</a></li>
 						<li><a class="third" href="personality.html">About</a></li>
 						<li><a href="history.html">His story</a></li>
-						<button class="animated fadeInUp" onclick="myFunctionm()" id="myButtonm" value="Click To Open Instructions">Gallery</button>
+						<button class="animated fadeInUp" onclick="myFunction()" id="myButton" value="Click To Open Instructions">Gallery</button>
 					</ul>
 				</div>
 				<div class="col-sm-9 animated fadeInUp">
