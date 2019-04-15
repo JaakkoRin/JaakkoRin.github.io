@@ -84,7 +84,28 @@ function myFunction() {
                 x.style.display = "none";
             }
         }
+function myFunctionm() {
 
+            var btn = document.getElementById("myButtonm");
+            //to make it fancier
+            if (btn.value == "Click To Close") {
+                btn.value = "Click To Open";
+                btn.innerHTML = "Click To Open";
+            }
+            else {
+                btn.value = "Click To Close";
+                btn.innerHTML = "Click To Close";
+            }
+            //this is what you're looking for
+            var x = document.getElementById("myDIV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+		
+		
 var i = 0; 			// Start Point
 var images = [];	// Images Array
 var time = 4000;	// Time Between Switch
@@ -134,6 +155,14 @@ window.onload=changeImg;
 			<a class="phone" href="resume.html">Portfolio</a>
 			<a class="third phone" href="personality.html">About</a>
 			<a class="phone" href="history.html">His story</a>
+			<div class="dropdown">
+				<div class="phone dropbtn">Contact</div>
+				<div class="dropdown-content">
+					<a class="somee" href="https://www.facebook.com" target="_blank"><img src="facebooklogo.png" style="width:33px; height:33px;" alt="Facebook" ></a>
+					<a class="somee" href="https://www.instagram.com" target="_blank"><img src="iglogo.png" style="width:33px; height:33px;" alt="Instagram"></a>
+					<a class="somee" href="mailto:yllappahoc-5573@yopmail.com"><img src="emaillogo.png" style="width:33px; height:33px;" alt="Email"></a>
+				</div>
+			</div>
 		</div>
 		
 		<h1 class="resume animated fadeInUp">About</h1>
@@ -147,7 +176,7 @@ window.onload=changeImg;
 						<li><a href="resume.html">Portfolio</a></li>
 						<li><a class="third" href="personality.html">About</a></li>
 						<li><a href="history.html">His story</a></li>
-						<button class="animated fadeInUp" onclick="myFunction()" id="myButton" value="Click To Open Instructions">Gallery</button>
+						<button class="animated fadeInUp" onclick="myFunctionm()" id="myButtonm" value="Click To Open Instructions">Gallery</button>
 					</ul>
 				</div>
 				<div class="col-sm-9 animated fadeInUp">
@@ -177,8 +206,6 @@ window.onload=changeImg;
 				</div>
 			</div>
 		</div>
-		
-		
 		<div class="card animated fadeIn" style="display:none" id="myDIVV" name="slide">
 			<div class="card_part card_part-one">
 			</div>
@@ -193,8 +220,6 @@ window.onload=changeImg;
 			<div class="card_part card_part-six">
 			</div>
 		</div>		
-
-
 	</main>
 	    <footer class="footerresume">
 		<div class="footerr">
@@ -206,18 +231,7 @@ window.onload=changeImg;
 			<a class="some" href="https://www.instagram.com" target="_blank"><img src="iglogo.png" style="width:42px; height:42px;" alt="Instagram"></a>
 			<a class="some" href="mailto:yllappahoc-5573@yopmail.com"><img src="emaillogo.png" style="width:42px; height:42px;" alt="Email"></a>
 		</nav>
-	<div class="test" id="navbarr">
-    <div class="footerphone">
-		<div class="footer">
-			<p>Portfolio Jaakko R</p>
-		</div>
-		</div>
-		<div class="navsomee">
-			<a class="somee" href="https://www.facebook.com" target="_blank"><img src="facebooklogo.png" style="width:42px; height:42px;" alt="Facebook" ></a>
-			<a class="somee" href="https://www.instagram.com" target="_blank"><img src="iglogo.png" style="width:42px; height:42px;" alt="Instagram"></a>
-			<a class="somee" href="mailto:yllappahoc-5573@yopmail.com"><img src="emaillogo.png" style="width:42px; height:42px;" alt="Email"></a>
-		</div>	
-	</div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
