@@ -267,24 +267,19 @@ footer, nav, .navigation {
 @media screen and (max-width: 780px) {
 #myDIVV, .card, .card_part{  
 	margin-top: 50%;
-	width: 95%;
+	width: 100%;
 	max-width: 400px;
 	z-index: -5;
 	background-repeat:no-repeat;
-	left: -27%;
+	left: -30%;
   }
 }
 @media screen and (max-width: 780px) {
 #myDIV{  
 	margin-bottom: 20%;
-	height: 110%;
-	width: 95%;
-	left: -33%;
-  }
-}
-@media screen and (max-width: 780px) {
-h1 {  
-	left: -20%;
+	height: 100%;
+	width: 100%;
+	left: -35%;
   }
 }
 .later {
