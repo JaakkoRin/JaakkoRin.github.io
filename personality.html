@@ -40,7 +40,7 @@ div#load_screen > div#loading{
 	
 	<script>
 window.addEventListener("load", function(){
-	var load_screen = document.getElementById("load_screen");
+	var load_screen = document.getElementById("load_screen"); 
 	document.body.removeChild(load_screen);
 });
 
@@ -85,6 +85,27 @@ function myFunction() {
             }
         }
 
+function myFunctionm() {
+
+            var btn = document.getElementById("myButtonm");
+            //to make it fancier
+            if (btn.value == "Click To Close") {
+                btn.value = "Click To Open";
+                btn.innerHTML = "Click To Open";
+            }
+            else {
+                btn.value = "Click To Close";
+                btn.innerHTML = "Click To Close";
+            }
+            //this is what you're looking for
+            var x = document.getElementById("myDIVV");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+
 var i = 0; 			// Start Point
 var images = [];	// Images Array
 var time = 4000;	// Time Between Switch
@@ -99,7 +120,7 @@ images[5] = "img6.jpg";
 
 // Change Image
 function changeImg(){
-	document.slide.src = images[i];
+	document.card.src = images[i];
 
 	// Check If Index Is Under Max
 	if(i < images.length - 1){
@@ -121,29 +142,25 @@ window.onload=changeImg;
 	<link rel="shortcut icon" type="image/x-icon" href="mylogo.ico" />
 </head>
   <body>
-    <div id="load_screen"><div id="loading">Loading Portfolio<div class="lds-dual-ring"></div></div></div>
+    <div id="load_screen"><div id="loading" style="font-size:150%;">Assembling myself<br><div class="lds-dual-ring"></div></div></div>
 	<header>
 		<div class="logo">
 			<img src="logojr.png" alt="Logo" title="10 out of 10 logo" style="width:200px;">
 			 <p class="logotext">ICT Student @Laurea</p>
 		</div>
-		
-		
 		<div class="test" id="navbar">
 			<a class="phone" href="index.html">Home</a>
 			<a class="phone" href="resume.html">Portfolio</a>
 			<a class="third phone" href="personality.html">About</a>
 			<a class="phone" href="history.html">His story</a>
-			<div class="dropdown">
-				<div class="phone dropbtn">Contact</div>
-				<div class="dropdown-content">
+			<div class="b dropdown phone">Contact
+				<div class="b dropdown-content">
 					<a class="somee" href="https://www.facebook.com" target="_blank"><img src="facebooklogo.png" style="width:33px; height:33px;" alt="Facebook" ></a>
 					<a class="somee" href="https://www.instagram.com" target="_blank"><img src="iglogo.png" style="width:33px; height:33px;" alt="Instagram"></a>
 					<a class="somee" href="mailto:yllappahoc-5573@yopmail.com"><img src="emaillogo.png" style="width:33px; height:33px;" alt="Email"></a>
 				</div>
 			</div>
 		</div>
-		
 		<h1 class="resume animated fadeInUp">About</h1>
 	</header>
 	<main>
@@ -155,8 +172,8 @@ window.onload=changeImg;
 						<li><a href="resume.html">Portfolio</a></li>
 						<li><a class="third" href="personality.html">About</a></li>
 						<li><a href="history.html">His story</a></li>
-						<button class="animated fadeInUp" onclick="myFunction()" id="myButton" value="Click To Open Instructions">Gallery</button>
 					</ul>
+					<button class="mb animated fadeInUp" onclick="myFunction()" id="myButton" value="Click To Open Instructions">Gallery</button>
 				</div>
 				<div class="col-sm-9 animated fadeInUp">
 					<p>Most like writing about positive things first so here goes. What you first need to hear is that my personality is deeply rooted in logical and critical thinking.
@@ -179,13 +196,13 @@ window.onload=changeImg;
 						<li>Not try to do everything myself</li>
 						<li>Teamwork skills</li>
 						<li>More realistic risk analysis (a falling meteor isn’t something that I need to account for)</li>
-						<li>Courage to go forth</li>
-						<button class="mgallery animated fadeInUp" onclick="myFunction()" id="myButton" value="Click To Open Instructions">Gallery</button>
+						<li>Courage to go forth</li>	
 					</ul>
+					<button class="mgallery animated fadeInUp" onclick="myFunctionm()" id="myButtonm" value="Click To Open Instructions">Gallery</button>
 				</div>
 			</div>
 		</div>
-		<div class="card animated fadeIn" style="display:none" id="myDIVV" name="slide">
+		<div class="card animated fadeIn" style="display:none" id="myDIVV">
 			<div class="card_part card_part-one">
 			</div>
 			<div class="card_part card_part-two">
