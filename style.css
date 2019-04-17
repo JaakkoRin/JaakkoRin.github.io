@@ -12,6 +12,9 @@ body {
 * {
   box-sizing: border-box;
 }
+p, li {
+	text-shadow: 1.25px 1.25px black;
+}
 .logo {
 	margin: 1%;
 	margin-bottom: 10%;
@@ -24,44 +27,56 @@ body {
 	font-style: italic;
 	text-shadow: 2px 2px black;
 }
-.dropdown {
+.dropdown { 
 	position: relative;
 	display: inline-block;
 }
 .dropdown-content {
-	display: none;
 	position: absolute;
 	z-index: 1;
+	padding: 2px 2px;
 }
 .dropdown-content a {
-	color: black;
-	padding: 2px 2px;
-	text-decoration: none;
 	display: block;
+
 }
 .dropdown:hover .dropdown-content {
 	display: block;
 }
+.b .b {
+    max-height:0;
+    overflow: hidden;
+    transition: max-height .75s;
+}
+.b:hover  .b {
+    max-height:200px;
+}
 .hiddentxt{
 	color: grey;
 }
+@media screen and (max-width: 780px) {
 .hiddenimg {
 	visibility: hidden;
-	opacity: 0;
-	transition: visibility 0s, opacity 0.5s linear;
 	display: none;
-	bottom: -220px;
+	bottom: 180px;
 	left: -25%;
+  }
+}
+.hiddenimg {
+	visibility: hidden;
+	display: none;
+	box-shadow: 7px 7px 4px rgb(56, 54, 54);
+	
 }
 .hiddentxt:hover ~ .hiddenimg {
 	visibility: visible;
 	display: block;
 	position: absolute;
-	margin-top: -55%;
+	margin-top: -100%;
 	margin-left: 30%;
 	z-index: 1000;
 	opacity: 1;
-	color: black;
+	color: black
 }
 .hiddentxt:hover {
 	color: black;
@@ -99,13 +114,15 @@ li a:hover {
 	margin-top: 5%;
 }
 .resumeitem {
-	margin-bottom: 130px;
+	margin-bottom: 250px;
 }
 .early {
 	margin-bottom: 50px;
 }
 .about{
 	margin-bottom: 50px;
+	font-style: oblique;
+	font-weight: 500;
 }
 .logo2 {
 	border: solid;
@@ -145,17 +162,17 @@ a:hover {
 }
 .lds-dual-ring {
 	display: inline-block;
-	width: 64px;
-	height: 64px;
+	width: 160px;
+	height: 160px;
 }
 .lds-dual-ring:after {
 	content: " ";
 	display: block;
-	width: 46px;
-	height: 46px;
+	width: 120px;
+	height: 120px;
 	margin: 1px;
 	border-radius: 50%;
-	border: 5px solid #fff;
+	border: 12px solid #fff;
 	border-color: #fff transparent #fff transparent;
 	animation: lds-dual-ring 1.2s linear infinite;
 }
@@ -184,7 +201,11 @@ footer, nav, .navigation {
 	visibility: hidden;
   }
 }
-
+@media screen and (max-width: 780px) {
+.mb {   
+	visibility: hidden;
+  }
+}
 .test {
 	background-color: rgb(158, 22, 20);
 	padding: 5px;
@@ -242,20 +263,29 @@ footer, nav, .navigation {
 }
 @media screen and (max-width: 780px) {
 #myDIVV, .card, .card_part{  
-	top: 710%;
-	width: 100%;
-	max-width: 400px;
+	max-width: 100%;
 	z-index: -5;
 	background-repeat:no-repeat;
 	left: -30%;
   }
 }
+@media screen and (min-width: 780px) {
+#myDIVV, #myDIV{  
+	max-width: 60%;
+  }
+}
 @media screen and (max-width: 780px) {
 #myDIV{  
-	margin-bottom: 20%;
+	margin-bottom: 10%;
 	height: 100%;
 	width: 100%;
 	left: -35%;
+	z-index: -10;
+  }
+}
+@media screen and (max-width: 780px) {
+video {
+	padding-top: 20%;
   }
 }
 .later {
@@ -263,7 +293,6 @@ footer, nav, .navigation {
 }
 button {
 	position: absolute;
-	margin-top: 5%;
 	background-color: rgb(181, 29, 21, 0.5);
 	border: 2px solid black;
 	color: grey;
@@ -276,7 +305,11 @@ button {
 	z-index: 2;
 	opacity: 0.5;
 }
-
+@media screen and (min-width: 780px) {
+button {   
+	left: -10%;
+  }
+}
 button:hover {
 	color: rgb(150,0,0);
 	background-color: rgb(66, 9, 7, 0.6);
@@ -284,16 +317,16 @@ button:hover {
 }
 #myDIV {
 	position: absolute;
-	margin-left: 35%;
+	margin-left: 32%;
 	display: none;
-	margin-top: -22%;
+	margin-top: -33%;
 	box-shadow: 7px 7px 4px grey;
 }
 #myDIVV {
 	position: absolute;
 	margin-left: 30%;
 	display: none;
-	margin-top: -35%;
+	margin-top: -42%;
 	box-shadow: 7px 7px 4px grey;
 }
 *,
@@ -358,4 +391,7 @@ button:hover {
 .mgallery {   
 	visibility: hidden;
   }
+}
+.mgallery {
+	margin-top: 5%;
 }
